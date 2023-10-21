@@ -7,7 +7,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={{alignItems:'center'}}>
         <Image
-          source={require('./assets/vs_blue.png')}
+          source={require('../assets/vs_blue.png')}
           style={{width:301, height: 361}}
         />
       </View>
@@ -19,23 +19,23 @@ export default function App() {
           <View style={{flexDirection:'row', justifyContent:'space-between', paddingTop: 10}}>
             <View style={{flexDirection: 'row'}}>
               <Image 
-                source={require('./assets/star.png')}
+                source={require('../assets/star.png')}
                 style={{width:23, height: 25}}
               />
               <Image 
-                source={require('./assets/star.png')}
+                source={require('../assets/star.png')}
                 style={{width:23, height: 25}}
               />
               <Image 
-                source={require('./assets/star.png')}
+                source={require('../assets/star.png')}
                 style={{width:23, height: 25}}
               />
               <Image 
-                source={require('./assets/star.png')}
+                source={require('../assets/star.png')}
                 style={{width:23, height: 25}}
               />
               <Image 
-                source={require('./assets/star.png')}
+                source={require('../assets/star.png')}
                 style={{width:23, height: 25}}
               />
             </View>
@@ -48,14 +48,14 @@ export default function App() {
           <View style={{flexDirection:'row', marginTop: 10}}>
             <Text style={{color: 'red', fontSize: 12, fontWeight: 700}}>O dau re hon hoan tien</Text>
             <Image 
-              source={require('./assets/hoi.png')}
+              source={require('../assets/hoi.png')}
               style={{width: 20, height:20, marginLeft:10}}
             />
           </View>
           <View style={{borderWidth:1, height:38, borderRadius: 10, flexDirection:'row', justifyContent:'center', alignItems: 'center'}}>
             <Text>4 MAU - CHON MAU</Text>
             <Image
-              source={require('./assets/vector.png')}
+              source={require('../assets/vector.png')}
               style={{width:14, height:14, position:'absolute', right:20}}
             />
           </View>
