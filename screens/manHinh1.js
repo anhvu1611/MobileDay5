@@ -1,13 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
-import { Button } from 'react-native-web';
+import React , {useState,useEffect} from 'react';
+import { StyleSheet, Text, View, Image, Pressable, TouchableOpacity } from 'react-native';
 
-export default function App() {
+
+export default function App({route,navigation}) {
+  const [image, setImage] = useState(require('../assets/vs_blue.png'))
+  useEffect(() => {
+    setImage(route.params);
+  }, [route.params]);
   return (
     <View style={styles.container}>
       <View style={{alignItems:'center'}}>
         <Image
-          source={require('../assets/vs_blue.png')}
+          source={image}
           style={{width:301, height: 361}}
         />
       </View>
@@ -39,28 +44,30 @@ export default function App() {
                 style={{width:23, height: 25}}
               />
             </View>
-            <Text>(Xem 828 danh gia)</Text>
+            <Text>(Xem 828 đánh giá)</Text>
           </View>
           <View style={{flexDirection:'row', marginTop: 10}}>
             <Text style={{fontSize:18, fontWeight: 700}}>1.780.000d</Text>
             <Text style={{marginLeft: 30}}>1.780.000d</Text>
           </View>
           <View style={{flexDirection:'row', marginTop: 10}}>
-            <Text style={{color: 'red', fontSize: 12, fontWeight: 700}}>O dau re hon hoan tien</Text>
+            <Text style={{color: 'red', fontSize: 12, fontWeight: 700}}>Ở đâu rẻ hơn hoàn tiền</Text>
             <Image 
               source={require('../assets/hoi.png')}
               style={{width: 20, height:20, marginLeft:10}}
             />
           </View>
-          <View style={{borderWidth:1, height:38, borderRadius: 10, flexDirection:'row', justifyContent:'center', alignItems: 'center'}}>
-            <Text>4 MAU - CHON MAU</Text>
+          <Pressable style={{borderWidth:1, height:38, borderRadius: 10, flexDirection:'row', justifyContent:'center', alignItems: 'center'}}
+            onPress={()=>{navigation.navigate('manHinh2')}}
+          >
+            <Text>4 MÀU - CHỌN MÀU</Text>
             <Image
               source={require('../assets/vector.png')}
               style={{width:14, height:14, position:'absolute', right:20}}
             />
-          </View>
+          </Pressable>
           <View style={{justifyContent:'center', alignItems:'center', backgroundColor:'red', height: 44, marginTop: 50, borderRadius:10}}>
-            <Text style={{color:'white', fontSize: 20, fontWeight:700}}>CHON MUA</Text>  
+            <Text style={{color:'white', fontSize: 20, fontWeight:700}}>CHỌN MUA</Text>  
           </View>
         </View>
       </View>
