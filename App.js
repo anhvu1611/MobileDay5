@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='manHinh2' screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName='manHinh1' screenOptions={{ headerShown: false }}>
         <Stack.Screen name="manHinh1" component={manHinh1} />
         <Stack.Screen name="manHinh2" component={manHinh2} />
         <Stack.Screen name="manHinh3" component={manHinh3} />

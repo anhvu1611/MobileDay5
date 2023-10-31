@@ -5,9 +5,9 @@ import { StyleSheet, Text, View, Image, Pressable, TouchableOpacity } from 'reac
 
 export default function App({route,navigation}) {
   const [image, setImage] = useState(require('../assets/vs_blue.png'))
-  useEffect(() => {
-    setImage(route.params);
-  }, [route.params]);
+  // useEffect(() => {
+  //   setImage(route.params);
+  // }, [route.params]);
   return (
     <View style={styles.container}>
       <View style={{alignItems:'center'}}>
